@@ -1,0 +1,22 @@
+code, kbd, pre, samp {
+    background-color: #fbfbfb;
+    border: 0px solid #DEDEDE;
+    border-radius: 0px;
+    font-size: 0.9rem;
+    font-family: "Hack", monospace;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.btn-outline-white {
+    color: #fff;
+    background-image: none;
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.blockquote {
+    border-left: .25rem solid #2b80a1;
+}

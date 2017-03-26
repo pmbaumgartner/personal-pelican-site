@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+  <div class="post-content text-center">
+    <p>My name is Peter Baumgartner and this is my face:</p>
+    <p><center><img src="images/LAZERS.jpg" alt="an image of Peter's face" style="border-radius: 50%;"></center></p>
+    <p>I enjoy writing, learning, and programming in Python. This site will (mostly) contain writing on those topics.</p>
+    <p>I’m a data scientist. I work for a non-profit <a href="http://www.rti.org/page.cfm/DataScience">research institute</a>. I used to work for a <a href="http://www.urbandictionary.com/define.php?term=deloitte">giant company</a>. I received a master’s degree in analytics prior to both of those things. I also used to be a high school math teacher.</p>
+  </div>
+</article>
+</div>
+
+<div class="row mb-5">
+<div class="card w-100">
+  <div class="card-header">
+    <h3>Blog</h3>
+  </div>
+  <div class="card-block">
+    {% for article in articles if article.category == 'Blog' %}
+            <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a> » <span class="text-muted">{{ article.date.strftime("%m/%d/%y") }}</span></li>
+          {% else %}
+            <li>Coming soon.</li>
+          {% endfor %}
+  </div>
+</div>
+</div>
+
+<div class="row">
+<div class="card w-100">
+  <div class="card-header">
+    <h3>Others</h3>
+  </div>
+  <div class="card-block">
+    {% for article in articles if article.category != 'Blog' %}
+            <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a> » <span class="text-muted">{{ article.tags|join(', ') }}</span></li>
+          {% else %}
+            <li>Coming soon.</li>
+          {% endfor %}
+  </div>
+</div>
+</div>
+
+{% endblock content %}
