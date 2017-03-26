@@ -1,4 +1,4 @@
-Title: Some Tips on Rendering Jupyter Notebooks for Pelican
+Title: Some Tips for Using Jupyter Notebooks with Pelican
 Date: 03/26/17
 Category: Blog
 Tags: blog, git, github, pelican, jupyter, notebooks, python

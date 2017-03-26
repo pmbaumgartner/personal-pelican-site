@@ -15,8 +15,6 @@ This workflow has been extremely helpful for:
 
 This example uses the [Australian atheletes data set](http://math.furman.edu/~dcs/courses/math47/R/library/DAAG/html/ais.html), which contains 11 numeric variables. This workflow is even more helpful on larger datsets with higher dimensionality.
 
----
-
 ### References
 
 > t-Distributed Stochastic Neighbor Embedding (t-SNE) is a (prize-winning) technique for dimensionality reduction that is particularly well suited for the visualization of high-dimensional datasets. 
@@ -27,6 +25,7 @@ This example uses the [Australian atheletes data set](http://math.furman.edu/~dc
 
 [Welcome to Bokeh](http://bokeh.pydata.org/en/latest/)
 
+---
 
 ```python
 from statsmodels.api import datasets
