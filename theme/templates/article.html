@@ -11,6 +11,11 @@
     <meta name="tags" content="{{tag}}" />
   {% endfor %}
 
+  {% if article.bokehcss and article.bokehjs %}
+      <link rel='stylesheet' href='{{ article.bokehcss }}'>
+      <script src="{{ article.bokehjs }}"></script>
+  {% endif %}
+
 {% endblock %}
 
 {% block content %}
@@ -23,12 +28,6 @@
 <div class='article_content'>
 {{ article.content }}
 </div>
-    <aside>
-    <div class="card">
-        <h3>Find an error or bug? Have a suggestion?</h3>
-        <p>Everything on this site is avaliable on GitHub. Head on over and <a href='https://github.com/chrisalbon/notes_on_data_science_machine_learning_and_artificial_intelligence/issues/new'>submit an issue.</a> You can also message me directly on <a href='https://twitter.com/chrisalbon'>Twitter</a>.</p>
-    </div>
-    </aside>
 </section>
 
 {% endblock %}

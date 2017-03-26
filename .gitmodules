@@ -1,0 +1,4 @@
+[submodule "output"]
+	path = output
+	url = https://github.com/pmbaumgartner/pmbaumgartner.github.io.git
+	ignore = all
