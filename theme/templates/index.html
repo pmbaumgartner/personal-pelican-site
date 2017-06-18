@@ -4,8 +4,8 @@
   <div class="post-content text-center">
     <p>My name is Peter Baumgartner and this is my face:</p>
     <p><center><img src="images/LAZERS.jpg" alt="an image of Peter's face" style="border-radius: 50%;"></center></p>
-    <p>I enjoy writing, learning, and programming in Python. This site will (mostly) contain writing on those topics.</p>
-    <p>I’m a data scientist. I work for a non-profit <a href="http://www.rti.org/page.cfm/DataScience">research institute</a>. I used to work for a <a href="http://www.urbandictionary.com/define.php?term=deloitte">giant company</a>. I received a master’s degree in analytics prior to both of those things. I also used to be a high school math teacher.</p>
+    <p>I’m a data scientist by day. I currently work for <a href="http://www.rti.org/page.cfm/DataScience">RTI International</a>, a non-profit research institute. I used to be a consultant at <a href="http://www.urbandictionary.com/define.php?term=deloitte">Deloitte</a>. Prior to delving into the world of data science, I was a high school math teacher.</p>
+    <p>Most of the content on this website is technical in nature. I generate most of my blog posts as python code in jupyter notebooks and transform them to blog posts in markdown.</p>
   </div>
 </article>
 </div>
@@ -28,10 +28,10 @@
 <div class="row">
 <div class="card w-100">
   <div class="card-header">
-    <h3>Others</h3>
+    <h3>Workflows (Recipes)</h3>
   </div>
   <div class="card-block">
-    {% for article in articles if article.category != 'Blog' %}
+    {% for article in articles if article.category == 'Workflow' %}
             <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a> » <span class="text-muted">{{ article.tags|join(', ') }}</span></li>
           {% else %}
             <li>Coming soon.</li>
